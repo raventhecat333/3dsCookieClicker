@@ -447,9 +447,6 @@ while true do
 	STICKx,STICKy = Controls.readCirclePad()
 	pad = Controls.read()
 	if state=="GAME" then
-		if COOKIE.count>999000000 then
-			state = "THEEND"
-		end
 		SHINE.rot=SHINE.rot+SHINE.speed
 		if SHINE.rot >= 2*pi then SHINE.rot = SHINE.rot-2*pi end
 		CURSOR.rot=CURSOR.rot+CURSOR.speed
