@@ -763,12 +763,10 @@ while true do
 			end
 		end
 		if COOKIE.count<1000000 and COOKIE.count>=0 then
-			gpu_drawtext(5, 5,(math.floor(COOKIE.count)).."   Cookies", white)
-			elseif COOKIE.count>1000000 and COOKIE.count<1000000000 then
-			gpu_drawtext(5, 5,(math.floor(math.floor(COOKIE.count)/1000)/1000).." M  Cookies", white)
-			elseif COOKIE.count>1000000000 and COOKIE.count<1000000000000 then
-			gpu_drawtext(5, 5,tostring(math.floor(math.floor(math.floor(COOKIE.count)/1000)/1000)).." M Cookies", white)
-		end
+       		     gpu_drawtext(5, 5,(math.floor(COOKIE.count)).."   Cookies", white)
+     		       elseif COOKIE.count>1000000 and COOKIE.count<1000000000000 then
+        	    gpu_drawtext(5, 5, tostring((math.floor(math.floor(COOKIE.count)/1000)/1000))).." M  Cookies", white)
+   		end
 		gpu_drawtext(5, 30,"per   sec : "..CpS, white)
 		if string.len(Tm)==2 then
 			gpu_drawtext(5, 204,Th..": "..Tm, blue)
